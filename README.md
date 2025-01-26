@@ -5,6 +5,8 @@ This project demonstrates building a UART device driver from scratch for STM32F0
 ## Features
 - **Baremetal UART Driver**: Direct control of UART1 without external libraries.
 - **GPIO Control**: Configures GPIO pins as alternate function for UART communication.
+- **Human-readable UART Functions**: The code provides simple and easy-to-use functions such as uartInit(), uartWriteBuf(), and uartReadByte(), allowing the programmer to quickly set up and interact with UART peripherals.
+- **Human-readable GPIO Functions**: The GPIO driver includes functions like gpio_set_mode() for configuring pin modes, and gpio_write() for controlling pin output. These functions simplify GPIO configuration and control, making the code more readable and easier for programmers to use.
 - **SysTick Timer (Partially Implemented)**: A simple timer implementation for periodic tasks, though currently under investigation due to issues with initialization causing a hardfault.
 
 ## Project Setup
