@@ -232,7 +232,7 @@ __attribute__((section(".vectors")))
  0,
  0,
  0,
- SysTick_Handler
+ //SysTick_Handler
 
 }; 
 
