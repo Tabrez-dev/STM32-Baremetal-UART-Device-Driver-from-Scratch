@@ -60,6 +60,7 @@ sudo minicom -D /dev/ttyUSB0 -b 115200
 
 ![image](https://github.com/user-attachments/assets/b73a2453-fb87-49c5-b08d-9dcf86a37d72)
 
+**The final commit of this repo has this functionality**
 
 ## Future Enhancements
 - **USART1 as Virtual COM Port**:
@@ -68,7 +69,7 @@ sudo minicom -D /dev/ttyUSB0 -b 115200
 
 ![image](https://github.com/user-attachments/assets/2e8a849f-f263-45ad-9f96-3c8c103f0132)
 
-**The final commit of this repo has this functionality**
+
 
 ---
 
