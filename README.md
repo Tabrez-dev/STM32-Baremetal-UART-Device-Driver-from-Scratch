@@ -101,7 +101,7 @@ The project involved controlling an LED connected to a GPIO pin, which was toggl
 ### 4. System Clock Configuration
 In this project, the STM32F072 was configured to use the internal High-Speed Internal (HSI) oscillator as the system clock, running at 8 MHz. While this was the default setting, confirming that the clock was correctly initialized and debugging it when there was an issue was challenging.
 
-- **Clock Validation:** Even though the HSI is enabled by default, I used bitwise operations to read and validate the status of the system clock during runtime to ensure there were no issues with the clock configuration. This step involved direct memory access to the RCC (Reset and Clock Control) registers.
+- **Clock Validation:** Even though the HSI is enabled by default, I used bitwise operations to read and validate the status of the system clock during runtime to ensure there were no issues with the clock configuration. This step involved direct memory access to the RCC_CR (Reset and Clock Control CR) register.
 
 ### 5. Buffer Overflow Handling
 Buffer overflow was a key challenge, especially with limited memory and no dynamic allocation:
@@ -118,5 +118,5 @@ Providing feedback to the user was essential, especially when dealing with incor
 - **User Experience:** Ensuring the system was responsive and provided clear feedback was crucial, especially in a baremetal environment where the overhead for additional features was minimal.
 
 ### Conclusion
-The project was a valuable experience in working with low-level hardware and managing the complexities of UART communication, GPIO control, and system clock configuration without relying on external libraries or high-level APIs. The challenges encountered primarily involved managing resources (buffering, interrupts) and ensuring that all hardware peripherals were configured and used correctly. By overcoming these challenges, I gained deeper insights into embedded systems development and improved my problem-solving skills in baremetal environments.
+The project was a valuable experience in working with low-level hardware and managing the complexities of UART communication and GPIO control without relying on external libraries or high-level APIs. The challenges encountered primarily involved managing resources (buffering, interrupts) and ensuring that all hardware peripherals were configured and used correctly. By overcoming these challenges, I gained deeper insights into embedded systems development and improved my problem-solving skills in baremetal environments.
 
