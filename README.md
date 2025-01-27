@@ -33,25 +33,33 @@ This project is designed for the STM32F072B-DISCO board, which operates with the
    ```bash
    make flash
    ```
-
 ### Testing
-- The main program blinks an LED and sends a "hi" message over UART1 (115200 baud).
-- To view the UART output, you can use one of the following methods:
-    - **Logic Analyzer**: Use a logic analyzer to capture the signals on the exposed PA9 (TX) and PA10 (RX) pins.
-      
+
+In the latest commit, the behavior of the program has been updated. The program now:
+
+- Turns the LED on and off in response to "on" and "off" commands sent from the terminal.
+
+To view the UART output and test the functionality, you can use one of the following methods:
+
+#### 1. Using a Logic Analyzer
+Use a logic analyzer to capture the TX (PA9) and RX (PA10) pins. This will allow you to visualize the UART signals and confirm communication.
+
    ![WhatsApp Image 2025-01-25 at 8 11 47 PM](https://github.com/user-attachments/assets/bd43a69e-18e7-47f2-bb4e-fbba8264c7e4)
    ![Screenshot from 2025-01-25 20-12-44](https://github.com/user-attachments/assets/01c446c2-3f34-4932-b4e7-9852e2fd9023)
 
-    - **USB to UART TTL Serial Module**: Connect the PA9 (TX) and PA10 (RX) pins, along with ground, to a USB to UART TTL serial module. Then, use a terminal program(like minicom) to view the UART output by running:
-```
+   **This is of a previous commit and the final program doesn't behave like this**
+
+#### 2. Using a USB to UART TTL Serial Module
+Connect the PA9 (TX) and PA10 (RX) pins along with ground to a USB to UART TTL serial module. Use a terminal program like `minicom` to view the UART output:
+
+```bash
 sudo minicom -D /dev/ttyUSB0 -b 115200
 ```
+
 ![WhatsApp Image 2025-01-27 at 4 08 04 PM](https://github.com/user-attachments/assets/421869f6-eb13-4221-8c4d-3a4c30c9a62f)
 
 ![image](https://github.com/user-attachments/assets/b73a2453-fb87-49c5-b08d-9dcf86a37d72)
 
-
-Alternatively, you can use other tools like screen to monitor the UART data.
 
 ## Future Enhancements
 - **USART1 as Virtual COM Port**:
@@ -59,6 +67,8 @@ Alternatively, you can use other tools like screen to monitor the UART data.
     However, this approach did not work as expected because the serial port did not appear on the terminal. Further investigation is needed to figure out why the virtual COM port is not being detected or initialized properly.
 
 ![image](https://github.com/user-attachments/assets/2e8a849f-f263-45ad-9f96-3c8c103f0132)
+
+**The final commit of this repo has this functionality**
 
 ---
 
